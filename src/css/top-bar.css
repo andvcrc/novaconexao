@@ -1,21 +1,19 @@
 .top-bar {
     width: 100vw;
-    height: clamp(1.1em, 2.1em + 3vw, 5.1em);
+    height: clamp(1.2em, 2.2em + 2vw, 4em);
     position: fixed;
     top: 0;
-    background-color: black;
-    box-shadow: 0.3em 0.3em 2px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     z-index: 5;
     transition: .5s all;
 }
 
 .top-bar i {
-    color: white;
-    font-size: clamp(1.5em, 2.5em + 1vw, 3.5em);
+    font-size: clamp(1em, 2.5em + 1vw, 3.5em);
     transition: all .5s;
     margin-right: 20px;
     margin-left: 20px;
@@ -23,4 +21,44 @@
 
 .top-bar i:hover {
     font-size: 4em;
+    cursor: pointer;
+}
+
+.top-bar i#first-icon {
+    background: radial-gradient(circle at 30% 107%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.top-bar i#second-icon {
+    color: #34af23;
+}
+
+.top-bar i#third-icon {
+    color: #004ae9;
+}
+
+#navigation {
+    width: 70%;
+}
+
+#social {
+    width: 30%;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation a {
+    font-size: clamp(.5em, 1.5em + 1vw, 2.5em);
+    text-transform: uppercase;
+    color: black;
 }
